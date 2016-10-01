@@ -3,14 +3,17 @@ function sendMessage(){
 	var div = $(document.createElement("div"));
 	div.addClass("right-align");
 	var text = $("#textbox").val();
-	textBubble.html(text);
-	textBubble.addClass("bubble");
-	div.append(textBubble)
-	$(".text-display").append(div);
-	$(".text-display").scrollTop($(".text-display")[0].scrollHeight);
-	$("#textbox").val("");
+	if(text == "") {
+		return 0;
+	} else {
+		textBubble.html(text);
+		textBubble.addClass("bubble");
+		div.append(textBubble)
+		$(".text-display").append(div);
+		$(".text-display").scrollTop($(".text-display")[0].scrollHeight);
+		$("#textbox").val("");
+	}
 
-	
 }
 
 $('#textbox').on('keydown', function(e) {
