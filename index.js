@@ -3,15 +3,20 @@ function sendMessage(){
 	var div = $(document.createElement("div"));
 	div.addClass("right-align");
 	var text = $("#textbox").val();
-	if(text == "") {
-		return 0;
+	if(text.length > 190){
+		alert("Your message is too long.");
 	} else {
-		textBubble.html(text);
-		textBubble.addClass("bubble");
-		div.append(textBubble)
-		$(".text-display").append(div);
-		$(".text-display").scrollTop($(".text-display")[0].scrollHeight);
-		$("#textbox").val("");
+		if(text == "") {
+			alert("Please do not send an empty message");
+		} else {
+			textBubble.html(text);
+			textBubble.addClass("bubble");
+			div.append(textBubble)
+			$(".text-display").append(div);
+			$(".text-display").scrollTop($(".text-display")[0].scrollHeight);
+			$("#textbox").val("");
+		}
+
 	}
 
 }
