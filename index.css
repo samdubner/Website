@@ -19,12 +19,12 @@ body{
 	border: 1px solid black;
 }
 
-.text-function-div{
+.input-text-div{
 	margin-top: 1em;
 	border-style: 1px solid black;
 }
 
-#textbox{
+#textbox-text{
 	width: 80%;
 }
 
@@ -39,9 +39,9 @@ body{
 	overflow-y: scroll;
 }
 
-.username {
+.username-div {
 	margin-top: 1em;
-	
+
 }
 
 .right-align{
@@ -69,4 +69,8 @@ body{
 	-moz-box-shadow: 0.125em 0.125em 0.25em #888;
 	box-shadow: 0.125em 0.125em 0.25em #888;
 
+}
+
+.username {
+	
 }
