@@ -29,7 +29,7 @@ function setName(){
 	$(".username-div").append(setName);
 }
 
-$('#textbox').on('keydown', function(e) {
+$('#textbox-text').on('keydown', function(e) {
     if (e.which == 13) {
         e.preventDefault();
 		$("#submit-button").trigger("click");
