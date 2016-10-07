@@ -46,21 +46,26 @@ body{
 
 .right-align{
 	text-align: right;
+	float: right;
+	height: auto;
 	margin-right: 1em;
+	width: 70%;
+	
 }
 
-.bubble {
+.bubble-right {
 	display: inline-block;
+	overflow:hidden;
 	position: relative;
 	padding-top:0.125em;
 	padding-bottom:0.125em;
 	padding-right:0.5em;
 	padding-left:0.5em;
 	width: auto;
-	height: 2em;
-	text-align: center;
+	height: auto;
+	text-align: left;
 	line-height: 2em;
-	background-color: #fff;
+	background-color: white;
 	border: 0.2em solid #666;
 	-webkit-border-radius: 1.875em;
 	-moz-border-radius: 1.875em;
@@ -68,6 +73,42 @@ body{
 	-webkit-box-shadow: 0.125em 0.125em 0.25em #888;
 	-moz-box-shadow: 0.125em 0.125em 0.25em #888;
 	box-shadow: 0.125em 0.125em 0.25em #888;
+	max-width:70%;
+	word-wrap: break-word;
+
+}
+
+.left-align{
+	text-align: left;
+	float: left;
+	height: auto;
+	margin-right: 1em;
+	width: 70%;
+}
+
+.bubble-left {
+	display: inline-block;
+	overflow:hidden;
+	position: relative;
+	padding-top:0.125em;
+	padding-bottom:0.125em;
+	padding-right:0.5em;
+	padding-left:0.5em;
+	width: auto;
+	height: auto;
+	text-align: left;
+	line-height: 2em;
+	background-color: black;
+	color: white;
+	border: 0.2em solid #666;
+	-webkit-border-radius: 1.875em;
+	-moz-border-radius: 1.875em;
+	border-radius: 1em;
+	-webkit-box-shadow: 0.125em 0.125em 0.25em #888;
+	-moz-box-shadow: 0.125em 0.125em 0.25em #888;
+	box-shadow: 0.125em 0.125em 0.25em #888;
+	max-width:70%;
+	word-wrap: break-word;
 
 }
 
