@@ -37,6 +37,13 @@ $("#textbox-text").on("keydown", function(e) {
     }
 });
 
+$("#textbox-name").on("keydown", function(e) {
+    if (e.which == 13) {
+        e.preventDefault();
+		$("#submit-name").trigger("click");
+    }
+});
+
 $("#textbox-text").change(function(){
 	
 });

@@ -109,6 +109,7 @@ body{
 	box-shadow: 0.125em 0.125em 0.25em #888;
 	max-width:70%;
 	word-wrap: break-word;
+	margin-left: 1em;
 
 }
 
