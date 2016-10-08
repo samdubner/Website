@@ -1,4 +1,8 @@
+//var socket = io();
+
 function sendMessage(){
+	var username = $("#username").val();
+	var usernameText = $(document.createElement("p"));
 	var textbubble = $(document.createElement("p"));
 	var div = $(document.createElement("div"));
 	div.addClass("right-align");
@@ -24,6 +28,7 @@ function sendMessage(){
 
 function setName(){
 	var setName = $(document.createElement("h3"));
+	setName.attr("id", "username")
 	var name = $("#textbox-name").val();
 	setName.html(name);
 	$(".enter-username").remove();
