@@ -1,8 +1,13 @@
 //var socket = io();
 
+var hasSetUsername = false;
+
 function sendMessage(){
+	if(!hasSetUsername){
+		alert("Please set a username");
+		return;
+	}
 	var username = $("#username").val();
-	var usernameText = $(document.createElement("p"));
 	var textbubble = $(document.createElement("p"));
 	var div = $(document.createElement("div"));
 	div.addClass("right-align");
@@ -24,7 +29,7 @@ function sendMessage(){
 		$(".text-display").scrollTop($(".text-display")[0].scrollHeight);
 		$("#textbox-text").val("");
 	}
-}
+} 
 
 function setName(){
 	var setName = $(document.createElement("h3"));
@@ -33,6 +38,7 @@ function setName(){
 	setName.html(name);
 	$(".enter-username").remove();
 	$(".username-div").append(setName);
+	hasSetUsername = true;
 }
 
 $("#textbox-text").on("keydown", function(e) {
@@ -49,15 +55,21 @@ $("#textbox-name").on("keydown", function(e) {
     }
 });
 
-$("#textbox-text").change(function(){
-	
-});
 $(document).on("change keyup paste mouseup", "#textbox-text", function(){
 	var text = $("#textbox-text").val();
 	if(text == ""){
 		$("#submit-button").attr("disabled", true);
 	} else{
 		$("#submit-button").attr("disabled", false);
+	}
+});
+
+$(document).on("change keyup paste mouseup", "#textbox-name", function(){
+	var text = $("#textbox-name").val();
+	if(text == ""){
+		$("#submit-name").attr("disabled", true);
+	} else{
+		$("#submit-name").attr("disabled", false);
 	}
 });
 
