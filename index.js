@@ -11,20 +11,20 @@ function sendMessage(){
 	var textbubble = $(document.createElement("p"));
 	var div = $(document.createElement("div"));
 	div.addClass("right-align");
-	var textbubblel = $(document.createElement("p"));
-	var divl = $(document.createElement("div"));
-	divl.addClass("left-align");
+	//var textbubblel = $(document.createElement("p"));
+	//var divl = $(document.createElement("div"));
+	//divl.addClass("left-align");
 	var text = $("#textbox-text").val();
 	if(text == ""){
 		
 	} else {
-		textbubblel.html(text);
+		//textbubblel.html(text);
 		textbubble.html(text);
-		textbubblel.addClass("bubble-left")
+		//textbubblel.addClass("bubble-left")
 		textbubble.addClass("bubble-right");
-		divl.append(textbubblel);
+		//divl.append(textbubblel);
 		div.append(textbubble);
-		$(".text-display").append(divl);
+		//$(".text-display").append(divl);
 		$(".text-display").append(div);
 		$(".text-display").scrollTop($(".text-display")[0].scrollHeight);
 		$("#textbox-text").val("");
