@@ -4,7 +4,8 @@ function sendMessage(){
 	if(!hasSetUsername){
 		alert("Please set a username");
 		return;
-	}
+	}	
+	
 	var textbubble = $(document.createElement("p"));
 	var div = $(document.createElement("div"));
 	div.addClass("right-align");
@@ -30,6 +31,10 @@ function sendMessage(){
 }
 
 function setName(){
+	if(($("#textbox-name") + "").split("")[0] === " "){
+		alert("Please set your username to something besides blank space.");
+		return;
+	}
 	var setName = $(document.createElement("h3"));
 	setName.attr("id", "username")
 	var name = $("#textbox-name").val();
@@ -55,7 +60,7 @@ $("#textbox-name").on("keydown", function(e) {
 
 $(document).on("change keyup paste mouseup", "#textbox-text", function(){
 	var text = $("#textbox-text").val();
-	if(text == ""){
+	if(text == "" || text.split("")[0] == " " ){
 		$("#submit-button").attr("disabled", true);
 	} else{
 		$("#submit-button").attr("disabled", false);
@@ -64,7 +69,7 @@ $(document).on("change keyup paste mouseup", "#textbox-text", function(){
 
 $(document).on("change keyup paste mouseup", "#textbox-name", function(){
 	var text = $("#textbox-name").val();
-	if(text == ""){
+	if(text == "" || text.split("")[0] == " " ){
 		$("#submit-name").attr("disabled", true);
 	} else{
 		$("#submit-name").attr("disabled", false);
