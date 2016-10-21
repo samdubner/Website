@@ -50,7 +50,7 @@ body{
 	height: auto;
 	margin-right: 1em;
 	width: 70%;
-	
+
 }
 
 .bubble-right {
@@ -114,5 +114,5 @@ body{
 }
 
 .username {
-	
+	font-weight: bold;
 }
