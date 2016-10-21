@@ -57,7 +57,7 @@ $("#textbox-text").on("keydown", function(e) {
 });
 
 $("#textbox-name").on("keydown", function(e) {
-	var text = $("#textbox-text").val();
+	var text = $("#textbox-name").val();
 	if(text == "" || text.split("")[0] == " " ){
 		return;
 	}
