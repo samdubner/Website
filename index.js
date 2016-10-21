@@ -12,13 +12,15 @@ function sendMessage(){
 	//var textbubblel = $(document.createElement("p"));
 	//var divl = $(document.createElement("div"));
 	//divl.addClass("left-align");
+	var usernameText = $(document.createElement("p"));
 	var username = $("#username").html();
+	var usernameText = username;
 	var text = $("#textbox-text").val();
 	if(text == ""){
 
 	} else {
 		//textbubblel.html(text);
-		textbubble.html(username + ": " + "<br>" + text);
+		textbubble.html("<strong class = username-text>" + usernameText + ": " + "</strong>" + "<br>" + text);
 		//textbubblel.addClass("bubble-left")
 		textbubble.addClass("bubble-right");
 		//divl.append(textbubblel);
@@ -31,16 +33,15 @@ function sendMessage(){
 }
 
 function setName(){
-	if(($("#textbox-name") + "").split("")[0] === " "){
-		alert("Please set your username to something besides blank space.");
-		return;
-	}
+	var name = $("#textbox-name").val();
+	//TODO: set username length limit
 	var setName = $(document.createElement("h3"));
 	setName.attr("id", "username")
-	var name = $("#textbox-name").val();
+	setName.addClass("username-text");
 	setName.html(name);
 	$(".enter-username").remove();
 	$(".username-div").append(setName);
+	
 	hasSetUsername = true;
 };
 
