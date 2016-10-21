@@ -1,4 +1,4 @@
-hasSetUsername = false;
+var hasSetUsername = false;
 
 function sendMessage(){
 	if(!hasSetUsername){
@@ -17,7 +17,6 @@ function sendMessage(){
 
 	} else {
 		//textbubblel.html(text);
-		var lineBreak = $(document.createElement("br"));
 		textbubble.html(username + ": " + "<br>" + text);
 		//textbubblel.addClass("bubble-left")
 		textbubble.addClass("bubble-right");
