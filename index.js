@@ -35,7 +35,10 @@ function sendMessage(){
 
 function setName(){
 	var name = $("#textbox-name").val();
-	//TODO: set username length limit
+	if(name.length > 20){
+		alert("Username must be less than or equal to 20 characters.");
+		return;
+	}
 	var setName = $(document.createElement("h3"));
 	setName.attr("id", "username")
 	setName.addClass("username-text");
