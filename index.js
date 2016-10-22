@@ -16,6 +16,7 @@ function sendMessage(){
 	var username = $("#username").html();
 	var usernameText = username;
 	var text = $("#textbox-text").val();
+	text = text.replace(/\</g,"&lt;");
 	if(text == ""){
 
 	} else {
@@ -38,6 +39,7 @@ function setName(){
 	var setName = $(document.createElement("h3"));
 	setName.attr("id", "username")
 	setName.addClass("username-text");
+	name = name.replace(/\</g,"&lt;");
 	setName.html(name);
 	$(".enter-username").remove();
 	$(".username-div").append(setName);
