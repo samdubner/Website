@@ -113,6 +113,6 @@ body{
 
 }
 
-.username {
-	font-weight: bold;
+.username-text{
+	font-size: 18px;
 }
