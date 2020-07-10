@@ -1,0 +1,57 @@
+* {
+  font-family: "courier";
+}
+
+.features {
+  display: inline-block;
+}
+
+.mdl-card {
+  margin-top: 2em !important;
+}
+
+.morchan-card-wide.mdl-card {
+  margin-left: 2em;
+  position: relative;
+  width: 45%;
+  float: left;
+}
+
+.dbm-card-wide.mdl-card {
+  margin-right: 2em;
+  position: relative;
+  width: 45%;
+  float: right;
+}
+
+.mdl-card__supporting-text {
+  padding-top: 0 !important;
+}
+
+.morchan-card-wide > .mdl-card__title {
+  color: #000000;
+  height: 176px;
+  background: url("../images/morchan.png") center / cover;
+}
+
+.morchan-card-wide > .mdl-card__menu {
+  color: #fff;
+}
+
+.dbm-card-wide > .mdl-card__title {
+  color: #000000;
+  height: 176px;
+  background: url("../images/DBM.png") center / cover;
+}
+
+.dbm-card-wide > .mdl-card__menu {
+  color: #fff;
+}
+
+#morchan-title {
+  padding: 16px 0 !important;
+}
+
+#dbm-title {
+  padding: 16px 0 !important;
+}

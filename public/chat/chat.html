@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>MorChan Beta</title>
+	<link rel="stylesheet" type="text/css" href="chat.css" />
+	<link rel="shortcut icon" href="../images/favicon.png" />
+	<base target="_blank" />
+</head>
+
+<body>
+
+	<!-- <h1>Under Construction</h1> -->
+
+	<div class="heading-div">
+		<h1 class="heading">MorChan</h1>
+	</div>
+
+	<div class="general-box">
+		<div class="username-div">
+			<input type="button" id="chatRoomButton" value="Chat Rooms" disabled></input>
+			<input placeholder="Enter Username" class="enter-username" id="textbox-name" type="text"></input>
+			<input value="submit" class="enter-username" id="submit-name" type="button" disabled></input>
+		</div>
+		<div class="text-display">
+			<div id="overlay" class="overlay" hidden>
+				<div id="overlayMenu" class="menu">
+					<div id="roomJoinDiv" class="roomJoin">
+						<h3 id="roomJoinTitle">Join a Room</h3><input id="roomJoinText" type="text" placeholder="Room Name"><input id="roomJoinButton" disabled="disabled"
+						    type="button" value="Join Room"></div>
+					<div class="joinList"><input id="joinListButton" type="button" value="Room List"></div>
+					<div id="roomCreateDiv" class="roomCreate">
+						<h3 id="roomCreateTitle">Create Room</h3><input id="roomCreateText" type="text" placeholder="Room Name"><input id="roomCreateButton" disabled="disabled"
+						    type="button" value="Create Room"></div>
+					<div class="privatePublic"><label><input id="roomCreatePrivate" type="checkbox"><strong>Private</strong></label></div>
+					<!-- <!-- only using the same class and id for testing -->
+					<div id="exitDiv" class="exit"><input id="exitDivButton" type="button" value="Close" class="closeMenu"></div>
+				</div>
+				<div class="joinListDiv" hidden>
+					<div class="background">
+						<h3 class="listTitle">Public Room List</h3>
+						<div class="roomListDisplay">
+						</div>
+						<div class="closeList"><input id="closeListButton" type="button" value="Room List"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="input-text-div" hidden>
+			<input placeholder="Enter Text Here..." class="input-text" id="textbox-text" type="text"></input>
+			<input value="submit" class="input-text" id="submit-button" type="button" disabled></input>
+		</div>
+	</div>
+	<script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.4/socket.io.js"></script>
+	<script src="./chat.js"></script>
+</body>
+
+</html>

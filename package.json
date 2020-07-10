@@ -1,0 +1,12 @@
+{
+  "name": "morchan",
+  "version": "0.0.1",
+  "description": "online chat room website",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "socket.io": "^2.3.0"
+  }
+}
